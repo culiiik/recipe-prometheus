@@ -5,6 +5,7 @@ prometheus:
       - go@1
     build:
       - echo `date`
+    deploy: [.]
   run:
     prepare:
         - sudo apt-get -y update
