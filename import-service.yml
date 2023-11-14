@@ -2,6 +2,9 @@ services:
   - hostname: prometheus
     type: go@1
     envVariables:
+     ports:
+      - port: 9090
+        httpSupport: true
     minContainers: 1
     maxContainers: 1
     buildFromGit: https://github.com/culiiik/recipe-prometheus
