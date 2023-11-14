@@ -24,4 +24,4 @@ prometheus:
     # how to start your application
     #start: ./bin/mqtt2prometheus.linux_amd64
     #start: python3 exporter.py
-    start:
+    start: echo `date`
