@@ -1,0 +1,8 @@
+services:
+  - hostname: prometheus
+    type: go@1
+    envVariables:
+    minContainers: 1
+    maxContainers: 1
+    buildFromGit: https://github.com/culiiik/recipe-prometheus
+    enableSubdomainAccess: false
