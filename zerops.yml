@@ -3,6 +3,8 @@ prometheus:
    
     base: 
       - go@1
+    build:
+      - echo `date`
   run:
     prepare:
         - sudo apt-get -y update
