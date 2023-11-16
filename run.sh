@@ -1,4 +1,6 @@
-#!/bin/bassh
+#!/bin/bash
+
+
 while true
 do
   sleep 600
