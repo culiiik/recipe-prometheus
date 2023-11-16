@@ -13,6 +13,8 @@ prometheus:
         - sudo yes | cp prometheus.service /etc/systemd/system/multi-user.target.wants/
         - sudo systemctl enable prometheus.service
     init:
+      - sudo chmod 777 /mnt/sharedstorage0/
+      - sudo systemctl daemon-reload
       - sudo service prometheus restart
       - chmod +x /var/www/run.sh
     start: /var/www/run.sh
