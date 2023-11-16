@@ -10,19 +10,9 @@ prometheus:
     prepare:
         - sudo apt-get -y update
         - sudo apt-get -y install prometheus
+        - sudo yes | cp prometheus.service /etc/systemd/system/multi-user.target.wants/
         - sudo systemctl enable prometheus.service
     init:
-    
-      # Copy prometheus config file and service file to configuarate data storage
-      #- sudo yes | cp prometheus.yml /etc/prometheus/
-      #- sudo yes | cp prometheus.service /etc/systemd/system/multi-user.target.wants/
-      #- sudo systemctl daemon-reload
-      # Restart prometheus
       - sudo service prometheus restart
       - chmod +x /var/www/run.sh
-      
-
-    # how to start your application
-    #start: ./bin/mqtt2prometheus.linux_amd64
-    #start: python3 exporter.py
     start: /var/www/run.sh
