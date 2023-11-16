@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/sh
 while true
 do
   sleep 600
