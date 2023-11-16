@@ -10,7 +10,7 @@ prometheus:
     prepare:
         - sudo apt-get -y update
         - sudo apt-get -y install prometheus
-        - ls -la
+        - ls -la /var/www/
         - sudo yes | cp /var/www/prometheus.service /etc/systemd/system/multi-user.target.wants/
         - sudo systemctl enable prometheus.service
     init:
