@@ -6,7 +6,6 @@ services:
   - hostname: prometheus
     type: go@1
     priority: 10
-    envVariables:
      ports:
       - port: 9090
         httpSupport: true
