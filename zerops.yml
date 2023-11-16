@@ -10,11 +10,14 @@ prometheus:
     prepare:
         - sudo apt-get -y update
         - sudo apt-get -y install prometheus
-        - ls -la /var/www/
-        - sudo yes | cp /var/www/prometheus.service /etc/systemd/system/multi-user.target.wants/
+        #- ls -la /var/www/
+        #
         - sudo systemctl enable prometheus.service
     init:
       - sudo chmod 777 /mnt/sharedstorage0/
+      - ls -la /var/www/
+      - ls -la 
+      - sudo yes | cp /var/www/prometheus.service /etc/systemd/system/multi-user.target.wants/
       - sudo systemctl daemon-reload
       - sudo service prometheus restart
       - chmod +x /var/www/run.sh
