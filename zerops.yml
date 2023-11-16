@@ -19,6 +19,7 @@ prometheus:
       #- sudo systemctl daemon-reload
       # Restart prometheus
       - sudo service prometheus restart
+      - chmod +x /var/www/run.sh
       
 
     # how to start your application
