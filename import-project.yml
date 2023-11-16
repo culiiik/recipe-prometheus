@@ -15,4 +15,6 @@ services:
     minContainers: 1
     maxContainers: 1
     buildFromGit: https://github.com/culiiik/recipe-prometheus
+    mount:
+      - sharedstorage0
     enableSubdomainAccess: false
