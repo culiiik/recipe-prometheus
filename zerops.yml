@@ -17,5 +17,5 @@ prometheus:
       - sudo systemctl daemon-reload
       - sudo service prometheus restart
       - ls -la
-      - chmod +x /var/www/run.sh
+      - sudo chmod +x /var/www/run.sh
     start: /var/www/run.sh
