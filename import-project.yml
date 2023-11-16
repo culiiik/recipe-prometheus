@@ -3,6 +3,9 @@ project:
   tags:
     - prometheus
 services:
+  - hostname: sharedstorage0
+    type: shared-storage
+    mode: NON_HA
   - hostname: prometheus
     type: go@1
     envVariables:
