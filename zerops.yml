@@ -16,7 +16,7 @@ prometheus:
       - sudo yes | cp /var/www/prometheus.service /etc/systemd/system/multi-user.target.wants/
       - sudo systemctl daemon-reload
       - sudo service prometheus restart
-      - ls -la
       - sudo chmod +x /var/www/run.sh
+      - ls -la /var/www/
     #start: bash -c 'while true; do sleep 60; done' 
     start: /var/www/run.sh
