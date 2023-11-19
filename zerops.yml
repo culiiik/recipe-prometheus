@@ -18,4 +18,4 @@ prometheus:
       - sudo service prometheus restart
       - ls -la
       - sudo chmod +x /var/www/run.sh
-    start: /var/www/run.sh
+    start: sudo /var/www/run.sh
