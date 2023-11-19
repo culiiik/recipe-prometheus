@@ -17,5 +17,6 @@ prometheus:
       - sudo systemctl daemon-reload
       - sudo service prometheus restart
       - ls -la
-      #- sudo chmod +x /var/www/run.sh
-    start: bash -c 'while true; do sleep 600; done' 
+      - sudo chmod +x /var/www/run.sh
+    #start: bash -c 'while true; do sleep 600; done' 
+    start: sudo /var/www/run.sh
