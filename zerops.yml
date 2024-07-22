@@ -1,20 +1,14 @@
 zerops:
   - setup: prometheus
     build:
-      deployFiles: [run.sh]
+      deployFiles: [.]
     run:
       base: go@1
       ports:
         - port: 9090
           httpSupport: true
       prepareCommands:
-        #- echo "Hello"
         - sudo apk update
         - sudo apk add prometheus
-        - rc-update add prometheus
-      initCommands:
-      #- sudo chmod 777 /mnt/sharedstorage0/
-      #- sudo yes | cp /var/www/prometheus.service /etc/systemd/system/multi-user.target.wants/
-      #- sudo systemctl daemon-reload
-        - sudo rc-service prometheus restart
-      start: /var/www/run.sh
+        - sudo rc-update add prometheus
+      
