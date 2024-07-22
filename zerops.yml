@@ -10,5 +10,5 @@ zerops:
       prepareCommands:
         - sudo apk update
         - sudo apk add prometheus
-        - sudo rc-update add prometheus
+      start: prometheus
       
